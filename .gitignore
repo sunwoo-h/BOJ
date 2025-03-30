@@ -1,0 +1,8 @@
+# .bin 확장자 파일 무시
+*.bin
+
+# .vscode 폴더 무시
+.vscode/
+
+# .cph 폴더 무시
+.cph/
