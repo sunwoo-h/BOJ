@@ -17,3 +17,18 @@ int main() {
   }
 }
 
+// 방법 2. N,i 로만 풀기(다른 사람 풀이)
+#include <iostream>
+using namespace std;
+
+int main() {
+	int N;
+	cin >> N;
+	for (int i = 1;i < N+1;i++) {
+		cout << string(N - i, ' '); // N-i 사용!
+		for (int j = 0;j < i;j++) {
+			cout << "* ";
+		}
+		cout << '\n';
+	}
+}
