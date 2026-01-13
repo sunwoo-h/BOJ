@@ -26,7 +26,6 @@ void permutation_do_while() {
 
 
 
-
 // 2. 재귀(swap)를 이용한 순열
 // 특 : depth 이용
 int b[] = {1,2,3};
