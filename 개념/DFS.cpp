@@ -3,13 +3,13 @@ using namespace std;
 
 const int n = 6; // 정점이 5개라서 6으로 선언해줌
 vector<int> adj[n];
-int visitied[n];
+int visited[n];
 
 void DFS(int u){
-  visitied[u] = 1;
+  visited[u] = 1;
   cout << u << '\n';
   for(int v : adj[u]){ // u에 인접한 요소들 탐색
-    if(visitied[v] == 0){
+    if(visited[v] == 0){
       DFS(v);
     }
   }
