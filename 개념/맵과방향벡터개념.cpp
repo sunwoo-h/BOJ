@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-const int n = 3;
+const int n = 3;  // const로 상수 선언해줘야 아래 배열 선언 에러 안 남
 int a[n][n], visited[n][n];
 
 const int dy[] = {-1, 0, 1, 0};

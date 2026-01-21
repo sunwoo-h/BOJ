@@ -9,7 +9,6 @@ int a[104][104];
 bool visited[104][104];
 
 
-
 void DFS(int y, int x){
   visited[y][x] == 1; // 방문 넣고
   for(int i = 0; i < 4; i++){ // 상하좌우 돌리기
@@ -23,8 +22,6 @@ void DFS(int y, int x){
 }
 
 
-
-
 int main() {
   // 1. 입력 받기
   cin >> n >> m;
@@ -34,9 +31,9 @@ int main() {
     }
   }
 
-  // 2. a배열 순회하며 DFS 돌리기
+  // 2. a배열 순회(왜냐면 ret++ 해줘야 하기 때문) 하며 DFS 돌리기
   for(int i = 0; i < n; i++){
-    for(int j = 0; j < n; j++){
+    for(int j = 0; j < m; j++){
       if(a[i][j] == 1 && !visited[i][j]){ // 요소가 1이고(육지이고) 방문하지 않았다면
         ret ++; // ret + 1 하고
         DFS(i,j); // 방귀 뀌기
