@@ -10,7 +10,7 @@ bool visited[104][104];
 
 
 void DFS(int y, int x){
-  visited[y][x] == 1; // 방문 넣고
+  visited[y][x] = 1; // 방문 넣고
   for(int i = 0; i < 4; i++){ // 상하좌우 돌리기
     ny = y + dy[i];
     nx = x + dx[i];
@@ -40,6 +40,6 @@ int main() {
       }
     }
   }
-
+  cout << ret << '\n';
   return 0;
 }
