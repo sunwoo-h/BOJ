@@ -1,13 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
-int n = 3;
+const int n = 3;
 int a[n][n], visited[n][n];
 
 const int dy[] = {-1, 0, 1, 0};
 const int dx[] = {0, 1, 0, -1};
 
 void go(int y, int x){
-  visitie[y][x] = 1; // 방문하면 visitied 1로 바꿈
+  visited[y][x] = 1; // 방문하면 visitied 1로 바꿈
   cout << y << " : " << x << '\n';
   for(int i = 0; i < 4; i++){ // 4 방향 탐색
     int ny = y + dy[i];
@@ -24,6 +24,7 @@ void go(int y, int x){
 }
 
 
+
 int main() {
   // 맵 입력 받기
   for(int i = 0; i < n; i++){
@@ -32,7 +33,16 @@ int main() {
     }
   }
   
-  go(0,0) // (0,0)부터 탐색 시작
+  go(0,0); // (0,0)부터 탐색 시작
   
+  // 입력
+  // 1 0 1
+  // 1 0 1
+  // 0 1 1
+
+  // 출력
+  // 0 : 0    -> 0,0부터 출발
+  // 1 : 0    -> [1,0] 이동하고 멈춤
+
   return 0;
 }
