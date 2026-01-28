@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int n, m, cnt, y, x;
+int n, m, y, x;
 
 const int dy[] = {-1, 0, 1, 0};
 const int dx[] = {0, 1, 0, -1};
