@@ -4,7 +4,7 @@ using namespace std;
 class Stack {
   private:
     static const int MAX = 100;
-    //tatic은 해당 멤버가 객체가 아니라 클래스에 속하도록 하기 위한 키워드입니다.
+    // static은 해당 멤버가 객체가 아니라 클래스에 속하도록 하기 위한 키워드입니다.
     // MAX는 각 Stack 객체의 상태가 아니라,
     // Stack이라는 자료구조의 공통 규칙이기 때문에 static으로 선언했습니다.
     // 또한 배열 크기처럼 컴파일 타임에 필요한 값으로 사용하기 위해서도 static이 필요합니다.

@@ -70,7 +70,7 @@ class LinkedList{
 
       // 2-1. 삭제 대상이 head인 경우
       if(head -> data == value) {
-        Node* temp = head; // 삭제할 head 노드 임시 저장(저장 안하면 이동하고 삭제값(temp) 찾을 도리가 없음)
+        Node* temp = head; // 삭제할 head 노드 임시 저장(저장 안하면 이동하고 삭제값(temp) 찾을 도리가 없음) 
         head = head -> next; // head를 다음 노드로 안전하게 이동
         delete temp; // 삭제 대상 node 저장 삭제
       }
@@ -103,6 +103,53 @@ class LinkedList{
         cur = cur -> next;
       }
       cout << "\n";
+    }
+
+    // 뒤집기
+    void reverse() {
+      Node* prev = nullptr;
+      Node* cur = head;
+  
+      while(cur != nullptr) { // 전체 순회
+          Node* nextNode = cur->next;
+          cur->next = prev;
+          prev = cur;
+          cur = nextNode;
+      }
+  
+      head = prev;
+    }
+
+    bool isEmpty() {
+    return head == nullptr;
+    }
+
+
+    int size() {
+      int count = 0; // 지역변수 선언
+      Node* cur = head;
+      while(cur != nullptr) { // 전체 순회
+          count++;
+          cur = cur->next;
+      }
+      return count;
+    }
+
+
+    // 인덱스 찾기(search 확장판)
+    int indexOf(int value) {
+      Node* cur = head;
+      int index = 0;
+
+      while(cur != nullptr) {
+          if(cur->data == value) {
+              return index;
+          }
+          cur = cur->next;
+          index++;
+      }
+
+      return -1; // 값이 리스트에 없음
     }
 };
 
