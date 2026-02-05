@@ -8,7 +8,7 @@ map<int, int> mp, mp_first; // mp : 숫자별 등장 횟수 저장, mp_first : �
 
 bool cmp(pair<int,int> a, pair<int,int> b){
   if(a.first == b.first){ // 빈도가 같다면
-    return mp_first[a.second] < mp_first[b.second]; // 먼저 등장한 숫자가 먼저 가게
+    return mp_first[a.second] < mp_first[b.second]; // second 값(숫자)의 첫 등장 위치(mp_first의 value)가 빠른 것이 앞으로 온다
   }
   return a.first > b.first; // 빈도가 다르면, 빈도 높은 순으로!
 }
@@ -27,10 +27,10 @@ int main(){
 
   // 정렬용 벡터 만들기
   for(auto it : mp){ // 맵 순회
-    v.push_back({it.second, it.first}); // {빈도, 숫자} 형태로 저장
+    v.push_back({it.second, it.first}); // {빈도, 숫자} 형태로 -> 벡터 v에 저장
   }
 
-  sort(v.begin(), v.end(), cmp);
+  sort(v.begin(), v.end(), cmp); // 벡터 v를 문제의 조건에 따라 정렬
 
   // 출력 부분
   for(auto i : v){
