@@ -45,7 +45,7 @@ int main(){
             if(!visited[ny][nx] && a[ny][nx] == 'L'){ //방문하지 않았고, 육지이면
               visited[ny][nx] = visited[y][x] + 1; // 방문처리
               q.push({ny,nx});
-              ret = max(ret, visited[y][x]); // !!!! 
+              ret = max(ret, visited[y][x]); // 매 순회마다 결과값 저
             }
           }
         }
