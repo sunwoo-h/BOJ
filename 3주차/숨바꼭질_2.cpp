@@ -43,7 +43,8 @@ int main(){
   // 1. 입력 받기
   cin >> n >> k;
   
-  if(n == k){
+  // 예외 처리
+  if(n == k){ 
     puts("0"); puts("1");
     return 0; 
   } 
