@@ -26,7 +26,7 @@ int solve(int a, int b, int c){
     int b = q.front().b;
     int c = q.front().c;
     q.pop();
-    if(visited[0][0][0]) break; // 0,0,0 을 방문했다면 멈춤
+    if(visited[0][0][0]) break; // 0,0,0 을 방문했다면 멈춤(scv 다 죽음))
     for(int i = 0; i < 6; i++){ // 6방향 탐색
       int na = max(0, a - combi[i][0]); // 연산값이 음수가 되지 않도록 max처리
       int nb = max(0, b - combi[i][0]);
