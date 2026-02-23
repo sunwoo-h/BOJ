@@ -29,7 +29,7 @@ int main(){
   visited[y1][x1] = 1;
   q.push({y1,x1});
 
-  while(a[y2][x2] != '0'){
+  while(a[y2][x2] != '0'){ // 범인이 0이 아닐 동안 반복(주난이가 범인 만나면 범인이 0으로 바뀌기 때문)
     cnt++;
     queue<pair<int,int>> temp; // 임시 큐
 
