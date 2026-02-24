@@ -11,6 +11,7 @@ int func(int n, int r, int c){
 
   int half = (int)pow(2,n-1); // 반쪽 정의 : 2^(n-1)
 
+  // r,c의 위치에 따라 호출하는 재귀 함수가 달라짐!
   if(r < half && c < half) return func(n-1, r, c); // 1번 사각형
   if(r < half && c >= half) return half*half + func(n-1, r, c-half); // 2번 사각형(앞에 1번 사각형 개수 더해줌)
   if(r >= half && c < half) return  2*half*half + func(n-1, r-half, c); // 3번 사각형(앞에 1번,2번 사각형 개수 더해줌)
