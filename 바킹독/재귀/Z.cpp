@@ -15,6 +15,7 @@ int func(int n, int r, int c){
   if(r < half && c >= half) return half*half + func(n-1, r, c-half); // 2번 사각형(앞에 1번 사각형 개수 더해줌)
   if(r >= half && c < half) return  2*half*half + func(n-1, r-half, c); // 3번 사각형(앞에 1번,2번 사각형 개수 더해줌)
   return 3*half*half + func(n-1, r-half, c-half); // 4번 사각형(앞에 1번,2번,3번 사각형 개수 더해줌)
+  // half를 빼는 건 ->  “사분면 안에서의 상대 좌표로 변환하는 것”
 }
 
 
