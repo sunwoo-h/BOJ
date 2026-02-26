@@ -4,7 +4,7 @@ using namespace std;
 int n,m;
 int a[10], ret[10];
 
-void go(int depth, int start){
+void go(int depth){
   if(depth == m){
     for(int i = 0; i < m; i++){
       cout << ret[i] << ' '; 
@@ -13,9 +13,9 @@ void go(int depth, int start){
     return;
   }
 
-  for(int i = start; i < n; i++){
+  for(int i = 0; i < n; i++){
     ret[depth] = a[i]; // 결과 저장
-    go(depth+1,i+1);
+    go(depth+1);
   }
 }
 
@@ -28,7 +28,7 @@ int main(){
 
   sort(a,a+n); // 오름차순 정렬
   
-  go(0, 0);
+  go(0);
 
 
   return 0;

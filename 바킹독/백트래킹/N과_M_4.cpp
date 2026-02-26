@@ -13,7 +13,7 @@ void go(int depth, int start){
 
   for(int i = start; i <= n; i++){ // start부터 n까지(이 꼴 자주나오니까 기억하기)
     a[depth] = i;
-    go(depth + 1, i); // 중복 허용이라 i 그대로
+    go(depth + 1, i); // 한 출력 값에서 같은 요소 허용이라 i 그대로
 
     // 만약 문제가 비내림차순이 아니라 오름차순이였다면,
     // start 인자에 i가 아니라 i+1을 보내줘야 함(n과 m 2번 문제의 start보내는 부분이랑 비교!!)
