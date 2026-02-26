@@ -42,11 +42,11 @@ void combi(int start, vector<int> v){
 }
 
 int main(){
-  // 재귀 사고(go함수)를 이용한 훌이
   cin >> n >> m;
+  // 1. 재귀 사고(go함수)를 이용한 훌이
   // go(0,1);
 
-  // 조합 개념(combi)를 이용한 훌이
+  // 2. 조합 개념(combi)를 이용한 훌이
   vector<int> b;
   combi(1,b);
 
