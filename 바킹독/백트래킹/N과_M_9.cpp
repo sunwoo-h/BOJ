@@ -14,6 +14,7 @@ void go(int depth){
   }
 
   int prev = -1; // 이번 depth에서 이미 쓴 값 기억하기 위한 변수 !지역으로 선언!
+  // 매 depth 마다 prev 초기화 위해 이 위치에 선언
   // -1로 선언하는이유는 입력값이랑 겹치지 말라고!
   for(int i = 0; i < n; i++){
     if(visited[i]) continue;
