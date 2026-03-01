@@ -11,9 +11,9 @@ int main() {
 	
 	for (auto &c : currency) {
 		while (totalAmount >= c.first) {
-			totalAmount -= c.first;
-			c.second--;
-			ret++;
+			totalAmount -= c.first; // 총 금액에서 뽑은 지폐 금액 뺌
+			c.second--; // 지폐 개수 감소
+			ret++; // 총 개수 증가
 		}
 	}
 	if(totalAmount == 0) cout << ret << '\n';
