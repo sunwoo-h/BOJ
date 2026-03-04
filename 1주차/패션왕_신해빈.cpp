@@ -19,9 +19,9 @@ int main(){
     }
     long long ret = 1; // 경우의 수 문제는 값이 커질 수 있기 떄문에 int보다 long 형식이 더 유리함
     for (auto i : mp){
-      ret *= (i.second+1);
+      ret *= (i.second+1); // 안 입는 경우가 있기에 종류마다 +1해줘서 곱함으로써 경우의수 계산
     }
-    ret--;
+    ret--; // 알몸인 경우의수를 빼기 위해 마지막에 -1 해줌
     cout << ret << "\n"; // 출력값이 꼭 한번에 나올 필요는 없음
   }
 
