@@ -25,11 +25,9 @@ int main(){
     from = v[i].second;
     to = v[i].first;
     ret++;
-
   }
 
   cout << ret + 1 << '\n'; // 젤 첫번째 요소까지 카운팅 위해 +1 해줌
-
 
   return 0;
 }
