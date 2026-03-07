@@ -38,7 +38,7 @@ int main(){
     }
   }
 
-  while(true){
+  while(true)
     // 초기화!! 중요
     fill(&visited[0][0], &visited[0][0] + 104*104, 0);
     v.clear();
