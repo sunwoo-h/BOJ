@@ -13,7 +13,7 @@ int main(){
   while(t--){
     deque<int> D;
     cin >> P >> N >> order;
-    int x = 0;
+    int x = 0; // for 문 밖에 x초기화 해줘야 1의자리도 잘 들어감
 
     for(char c : order){ // 배열 분해
       if(c == '[' || c == ']') continue; // 대괄호는 무시
