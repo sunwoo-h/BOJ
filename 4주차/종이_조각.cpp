@@ -44,7 +44,7 @@ int main(){
           cur = 0;
         }
       }
-      sum += cur;
+      sum += cur; // 나머지 처리
     }
 
     ret = max(ret,sum); // 최댓값 갱신
